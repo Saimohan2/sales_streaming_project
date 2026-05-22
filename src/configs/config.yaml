@@ -1,0 +1,16 @@
+app:
+  name: sales_pipeline
+
+input:
+  path: data\input\sample.csv
+  format: csv
+  header: true
+  inferSchema: true
+
+transform:
+  age_threshold: 20
+  senior_age: 40
+
+output:
+  path: data\output
+  format: parquet
