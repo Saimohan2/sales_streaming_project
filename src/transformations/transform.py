@@ -11,7 +11,7 @@ def transform_data(df: DataFrame) -> DataFrame:
 
     # Filter rows
 
-    df = df.filter(F.col("age")>25)
+    df = df.filter(F.col("age")>25) 
 
     # add new column
     df = (df.withColumn("age_group", F.when(F.col("age")>40, F.lit("senior"))
