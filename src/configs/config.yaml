@@ -13,4 +13,5 @@ transform:
 
 output:
   path: data\output
-  format: parquet
+  format: csv
+  mode: overwrite

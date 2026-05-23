@@ -2,6 +2,7 @@ from common.spark_session import get_spark
 from reader import read_data
 from transformations.transform import transform_data
 from common.config_loader import load_config
+from writer import write_data
 
 def main():
 
@@ -23,6 +24,8 @@ def main():
     df = transform_data(df, config)
     
     df.show()
+
+    write_data(df, config)
 
     spark.stop()
 
